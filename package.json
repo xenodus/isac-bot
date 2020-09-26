@@ -1,0 +1,34 @@
+{
+  "name": "isac-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "isac-bot.js",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "bufferutil": "^4.0.1",
+    "dblapi.js": "^2.4.1",
+    "discord.js": "^12.3.1",
+    "erlpack": "^0.1.3",
+    "hashids": "^2.2.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.0",
+    "promise-mysql": "^3.3.2",
+    "sodium": "^3.0.2",
+    "utf-8-validate": "^5.0.2",
+    "zlib-sync": "^0.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xenodus/isac-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xenodus/isac-bot/issues"
+  },
+  "homepage": "https://github.com/xenodus/isac-bot#readme"
+}

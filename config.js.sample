@@ -1,0 +1,47 @@
+const mysql = require('promise-mysql');
+var pool;
+
+const config = {
+	production: {
+		prefix: "!",
+		getPool: function () {
+		  if (pool) return pool; // if it is already there, grab it here
+		  pool = mysql.createPool({
+				connectionLimit : 10,
+			  host     : 'localhost',
+			  user     : '',
+			  password : '',
+			  database : 'isac-bot',
+			  charset: "utf8mb4"
+		  });
+		  return pool;
+		},
+		adminIDs: {
+			'123456789': 'xenodus' // Discord ID
+		},
+		botToken: '123456789', // Discord App Token
+		devBotToken: '123456789',
+		apiSearchURL: 'https://thedivisiontab.com/api/search.php?platform=uplay&name=', // https://thedivisiontab.com/api/search.php?name=xenodus86&platform=uplay
+		apiSearchBaseURL: 'https://thedivisiontab.com/api/search.php?', // https://thedivisiontab.com/api/search.php?name=xenodus86&platform=uplay
+		apiPlayerURL: 'https://thedivisiontab.com/api/player.php?pid=', // https://thedivisiontab.com/api/player.php?pid=9bd44bde-9c48-48ae-9c2b-4e11e4b16083
+
+		apiSearchBaseURL_TGG: 'https://api.tracker.gg/api/v2/division-2/standard/profile/', // https://api.tracker.gg/api/v2/division-2/standard/profile/psn/LikeJayzo
+
+		topGGtoken: '123456789',
+
+		helpTxt:
+		  "```md\n# ISAC Bot Commands```\n" +
+		  '```md\n# Register: !register agent_id```\n' +
+		  '```md\n# Agent Stats: !agent agent_id```\n' +
+		  '```md\n# Dark Zone Stats: !dz agent_id```\n' +
+		  '```md\n# PvE Stats: !pve agent_id```\n' +
+		  '```md\n# Weapons Stats: !weapons agent_id```\n' +
+		  '```md\n# EXP Summary: !exp agent_id```\n' +
+		  '```md\n# Server Rankings: !rank [ playtime | ecredit | gearscore | commendation | clanexp | clanexp24h | clanexp7d | clanexp30d ]```\n' +
+		  '```md\n# Change Server\'s Platform (default: uplay): !platform [ uplay | psn | xbl ]```\n' +
+		  '```md\n# Clan Role (!rank will only show members from this role): !clan role server_role_case_sensitive```\n' +
+		  '```md\n# Remove Clan Role: !clan removerole```\n' +
+		  '```md\n# Donation Links: !donate```',
+	},
+};
+module.exports = config;
