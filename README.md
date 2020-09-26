@@ -1,6 +1,8 @@
 # isac-bot
 
-Self hosting ISAC Bot
+Requirements: MySQL, Node.js
+
+Self hosting ISAC Bot:
 
 1. Setup database by importing the schema in /db/isac-bot-schema.sql
 2. Install libs and packages with npm install
