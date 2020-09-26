@@ -9,8 +9,8 @@ const config = {
 		  pool = mysql.createPool({
 				connectionLimit : 10,
 			  host     : 'localhost',
-			  user     : '',
-			  password : '',
+			  user     : '123456789',
+			  password : '123456789',
 			  database : 'isac-bot',
 			  charset: "utf8mb4"
 		  });
